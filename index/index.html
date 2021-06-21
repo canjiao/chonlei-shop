@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../plugin/bootstrap.min.css">
+    <script src="../plugin/jquery-1.11.3.min.js"></script>
+    <script src="../plugin//bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../plugin//swiper-bundle.css">
+    <script src="../plugin/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../common/utils.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <header class="header container-fluid ">
+        <div class="top">
+            <div class="container top-row clearfix">
+                <div class="left">
+                    <div class="user-info top-row-item">
+                        <span class="login" onclick="login()">登录</span>
+                        <!-- <span class="user-name">小张</span> -->
+                        <ul class="item-list">
+                            <li onclick="loginOut()">退出登录</li>
+                        </ul>
+                    </div>
+                    <div class="register-info top-row-item">
+                        <span class="register">免费注册</span>
+                    </div>
+                    <div class="address-info top-row-item">
+                        <span class="address">上海市 上海市</span>
+
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="my-info top-row-item">
+                        <span class="my">我的崇磊<img src="../image/icon-arrow-down.png" alt="" width="12"></span>
+                        <ul class="item-list">
+                            <li>我的订单</li>
+                            <li>我的订单</li>
+                            <li>我的订单</li>
+                            <li>我的订单</li>
+                            <li>我的订单</li>
+                        </ul>
+                    </div>
+                    <div class="logistics-info top-row-item">
+                        <span class="logistics">物流信息<img src="../image/icon-arrow-down.png" alt="" width="12"></span>
+
+                    </div>
+                    <div class="helper-info top-row-item">
+                        <span class="helper">帮助中心</span>
+
+                    </div>
+                    <div class="join-info top-row-item">
+                        <span class="join">加入我们</span>
+
+                    </div>
+                    <div class="new-info top-row-item">
+                        <span class="new">新闻资讯<img src="../image/icon-arrow-down.png" alt="" width="12"></span>
+
+                    </div>
+                    <div class="server-info top-row-item">
+                        <span class="server">在线客服</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search container clearfix">
+            <img src="../image/logo.png" alt="" class="logo">
+            <div class="search-input">
+                <div class="input clearfix">
+                    <input type="text" placeholder="">
+                    <span class="s-btn"></span>
+                </div>
+                <div class="tag">
+                    <a href="">扳手</a>
+                    <a href="">扳手</a>
+                    <a href="">扳手</a>
+                    <a href="">扳手</a>
+                    <a href="">扳手</a>
+                    <a href="">扳手</a>
+                </div>
+            </div>
+            <div class="online-price text-center">
+                <img src="../image/icon-chat.png" alt="" width="16">
+                <span>在线询价</span>
+            </div>
+            <div class="my-car text-center">
+                <img src="../image/icon-car.png" alt="" width="20">
+                <span>我的购物车(0)</span>
+                <img src="../image/icon-arrow-down.png" alt="" width="16">
+            </div>
+        </div>
+        <div class="bottom container clearfix">
+            <div class="categery ">
+                <div class="title">
+                    <img src="../image//icon-categery.png" alt="" width="20">
+                    <span>产品分类</span>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h4>分类1</h4>
+                            <div class="li-child">
+                                <div class="row">
+                                    <div class="col-md-2"><strong>手动工具1</strong></div>
+                                    <div class="col-md-10">
+                                        <a href="">扳手扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手扳手</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2"><strong>手动工具2</strong></div>
+                                    <div class="col-md-10">
+                                        <a href="">扳手扳手2</a>
+                                        <a href="">扳手2</a>
+                                        <a href="">扳手扳手2</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手</a>
+                                        <a href="">扳手扳手</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>分类2</h4>
+                        </li>
+                        <li>
+                            <h4>分类2</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right flex">
+                <ul class="flex">
+                    <li class="li-active">首页</li>
+                    <li>行家首选</li>
+                    <li>新品发布</li>
+                    <li class="hot">每日特价</li>
+                    <li>品牌中心</li>
+                    <li>积分商城</li>
+                    <li>招商合作</li>
+                </ul>
+                <div class="tel">采购专线：<span style="color: #ec0b1b;">400-000-1242</span></div>
+            </div>
+        </div>
+
+        <!-- fixed右侧我的相关 -->
+        <div class="slide-my">
+            <div class="slide-my-li my-center">
+                <span class="simplify-name">立即登录</span>
+                <span class="simplify-icon"><img src="../image/icon-fixedMy-my.png" alt="" width="28" height="26"></span>
+            </div>
+            <div class="slide-my-li my-car">
+                <span class="simplify-name">我的购物</span>
+                <span class="simplify-icon"><img src="../image/icon-fixedMy-car.png" alt=""></span>
+            </div>
+            <div class="slide-my-li my-collection">
+                <span class="simplify-name">我的收藏</span>
+                <span class="simplify-icon"><img src="../image/icon-fixedMy-shoucang.png" alt=""></span>
+            </div>
+            <div class="slide-my-li my-online">
+                <span class="simplify-name">在线客服</span>
+                <span class="simplify-icon"><img src="../image/icon-fixedMy-kefu.png" alt=""></span>
+            </div>
+            <div class="slide-my-li go-top" onclick="goTop()">
+                <span class="simplify-name">回到顶部</span>
+                <span class="simplify-icon"><img src="../image/icon-fixedMy-top.png" alt=""></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main container">
+
+        <!-- 轮播和活动热销榜 -->
+        <div class="banner-hot clearfix">
+            <!-- banner轮播大图 -->
+            <div class="banner-swiper swiper-container">
+                <div class="banner-wrapper swiper-wrapper">
+                    <div class="banner-slide swiper-slide"><img src="../image/banner.jpg" alt=""></div>
+                    <div class="banner-slide swiper-slide"><img src="https://img2.zhidianlife.com/image/2020/11/04/3a0fc9d2-8f04-4491-9382-a41577316d54.jpeg" alt=""></div>
+                    <div class="banner-slide swiper-slide"><img src="../image/banner.jpg" alt=""></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="banner-pagination swiper-pagination"></div>
+            </div>
+            <!-- 活动热销榜 -->
+            <div class="hot">
+                <div class="hot-title text-center">活动热销榜</div>
+                <!-- swiper -->
+                <div class="hot-swiper swiper-container">
+                    <div class="hot-wrapper swiper-wrapper">
+                        <div class="hot-slide swiper-slide" style="height: 100%;">
+                            <!-- 内嵌swiper 竖向滚动-->
+                            <div class="swiper-container swiper-container-scrollbar" style="height: 100%;">
+                                <div class="swiper-wrapper">
+                                    <ul class="swiper-slide" style="height:auto;">
+                                        <li class="product clearfix">
+                                            <img src="../image/image1.jpg" alt="" class="product-img">
+                                            <div class="product-info">
+                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
+                                                <p class="star-level">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
+                                                </p>
+                                                <div class="price">
+                                                    <span class="sale-price">￥199</span>
+                                                    <!-- <span class="ask-price">在线询价</span> -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="product clearfix">
+                                            <img src="../image/image1.jpg" alt="" class="product-img">
+                                            <div class="product-info">
+                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
+                                                <p class="star-level">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
+                                                </p>
+                                                <div class="price">
+                                                    <span class="ask-price">在线询价</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="product clearfix">
+                                            <img src="../image/image1.jpg" alt="" class="product-img">
+                                            <div class="product-info">
+                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
+                                                <p class="star-level">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
+                                                </p>
+                                                <div class="price">
+                                                    <span class="ask-price">在线询价</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="product clearfix">
+                                            <img src="../image/image1.jpg" alt="" class="product-img">
+                                            <div class="product-info">
+                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
+                                                <p class="star-level">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
+                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
+                                                </p>
+                                                <div class="price">
+                                                    <span class="ask-price">在线询价</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+
+                        </div>
+                        <!-- <ul class="hot-slide swiper-slide">
+                            <li class="product clearfix">
+                                <img src="../image/image1.jpg" alt="" class="product-img">
+                                <div class="product-info">
+                                    <p class="title">飞科剃22</p>
+                                    <p class="star-level">
+                                        <img src="../image/icon-star-orange.png" alt="" width="10">
+                                        <img src="../image/icon-star-orange.png" alt="" width="10">
+                                        <img src="../image/icon-star-orange.png" alt="" width="10">
+                                        <img src="../image/icon-star-orange.png" alt="" width="10">
+                                        <img src="../image//icon-star-gray.png" alt="" width="10">
+                                    </p>
+                                    <div class="price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="hot-pagination swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- 新会员专区 -->
+        <div class="members">
+            <div class="top clearfix">
+                <div class="left">
+                    <strong>新会员专区</strong>
+                    <span>新会员专享，优惠多多</span>
+                </div>
+                <div class="right">查看更多 ></div>
+            </div>
+            <div class="bottom">
+                <div class="members-swiper swiper-container">
+                    <div class="members-wrapper swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="sale-price">￥199</span>
+                                        <!-- <span class="ask-price">在线询价</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-item-colum">
+                                <img src="../image/image1.jpg" alt="" class="p-img">
+                                <div class="p-info">
+                                    <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                    <div class="p-price">
+                                        <span class="ask-price">在线询价</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- 楼层 -->
+        <div class="floors">
+            <div class="floor1 floor-item flex">
+                <div class="left-banner">
+                    <h3>工具/耗材1</h3>
+                    <p>这里是世界的工具箱</p>
+                    <div class="tags">
+                        <span>电动工具</span>
+                        <span>电动工具</span>
+                        <span>扳手/手动套筒</span>
+                    </div>
+                    <div class="all">查看全部</span></div>
+                    <div class="floor-img">
+                        <img src="../image/icon-floor-left.png" alt="" width="175" height="130">
+                    </div>
+                </div>
+                <div class="right-info flex">
+                    <div class="product-categery">
+                        <ul class="three-categery flex">
+                            <li class="active" data-index="0">精选热卖</li>
+                            <li data-index="1">复印纸</li>
+                            <li data-index="2">复印纸</li>
+                            <li data-index="3">复印纸</li>
+                            <li data-index="4">复印纸</li>
+                            <li data-index="5">复印纸</li>
+                            <li data-index="6">复印纸</li>
+                        </ul>
+                        <div class="product-list">
+                            <div class="list flex">
+                                <div class="product-item product-item-colum">
+                                    <img src="../image/image1.jpg" alt="" class="p-img">
+                                    <div class="p-info">
+                                        <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                        <div class="p-price">
+                                            <span class="ask-price">在线询价</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <div class="list flex">
+                                <div class="product-item product-item-colum">
+                                    <img src="../image/image1.jpg" alt="" class="p-img">
+                                    <div class="p-info">
+                                        <p class="p-title">2222222222222</p>
+                                        <div class="p-price">
+                                            <span class="ask-price">在线询价</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rank">
+                        <div class="top flex">
+                            <p><span>工具耗材排行榜<img src="../image/icon-fire.png" alt=""></span></p>
+                        </div>
+                        <!-- swiper 排行榜-->
+                        <div class="rank-swiper swiper-container">
+                            <div class="rank-wrapper swiper-wrapper">
+                                <ul class="rank-slide swiper-slide">
+                                    <li class="product-item product-item-row clearfix">
+                                        <img src="../image/icon-rank-1.png" alt="" width="20" height="25" class="score">
+                                        <img src="../image/image1.jpg" alt="" class="p-img">
+                                        <div class="p-info">
+                                            <p class="p-title">飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22</p>
+                                            <div class="p-price">
+                                                <span class="sale-price">￥199</span>
+                                                <!-- <span class="ask-price">在线询价</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="rank-slide swiper-slide">
+                                    <li class="product-item product-item-row clearfix">
+                                        <img src="../image/icon-rank-1.png" alt="" width="20" height="25" class="score">
+                                        <img src="../image/image1.jpg" alt="" class="p-img">
+                                        <div class="p-info">
+                                            <p class="p-title">飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22</p>
+                                            <div class="p-price">
+                                                <span class="sale-price">￥199</span>
+                                                <!-- <span class="ask-price">在线询价</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="rank-pagination swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor2 floor-item flex">
+                <div class="left-banner">
+                    <h3>工具/耗材1</h3>
+                    <p>这里是世界的工具箱</p>
+                    <div class="tags">
+                        <span>电动工具</span>
+                        <span>电动工具</span>
+                        <span>扳手/手动套筒</span>
+                    </div>
+                    <div class="all">查看全部</span></div>
+                    <div class="floor-img">
+                        <img src="../image/icon-floor-left.png" alt="" width="175" height="130">
+                    </div>
+                </div>
+                <div class="right-info flex">
+                    <div class="product-categery">
+                        <ul class="three-categery flex">
+                            <li class="active" data-index="0">精选热卖</li>
+                            <li data-index="1">复印纸</li>
+                            <li data-index="2">复印纸</li>
+                            <li data-index="3">复印纸</li>
+                            <li data-index="4">复印纸</li>
+                            <li data-index="5">复印纸</li>
+                            <li data-index="6">复印纸</li>
+                        </ul>
+                        <div class="product-list">
+                            <div class="list flex">
+                                <div class="product-item product-item-colum">
+                                    <img src="../image/image1.jpg" alt="" class="p-img">
+                                    <div class="p-info">
+                                        <p class="p-title">工具剪刀工具剪刀工具剪刀工具剪刀</p>
+                                        <div class="p-price">
+                                            <span class="sale-price">￥199</span>
+                                            <!-- <span class="ask-price">在线询价</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <div class="list flex">
+                                <div class="product-item product-item-colum">
+                                    <img src="../image/image1.jpg" alt="" class="p-img">
+                                    <div class="p-info">
+                                        <p class="p-title">2222222222222</p>
+                                        <div class="p-price">
+                                            <span class="ask-price">在线询价</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rank">
+                        <div class="top flex">
+                            <p><span>工具耗材排行榜<img src="../image/icon-fire.png" alt=""></span></p>
+                        </div>
+                        <!-- swiper 排行榜-->
+                        <div class="rank-swiper swiper-container">
+                            <div class="rank-wrapper swiper-wrapper">
+                                <ul class="rank-slide swiper-slide">
+                                    <li class="product-item product-item-row clearfix">
+                                        <img src="../image/icon-rank-1.png" alt="" width="20" height="25" class="score">
+                                        <img src="../image/image1.jpg" alt="" class="p-img">
+                                        <div class="p-info">
+                                            <p class="p-title">飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22</p>
+                                            <div class="p-price">
+                                                <span class="sale-price">￥199</span>
+                                                <!-- <span class="ask-price">在线询价</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="rank-slide swiper-slide">
+                                    <li class="product-item product-item-row clearfix">
+                                        <img src="../image/icon-rank-1.png" alt="" width="20" height="25" class="score">
+                                        <img src="../image/image1.jpg" alt="" class="p-img">
+                                        <div class="p-info">
+                                            <p class="p-title">飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22</p>
+                                            <div class="p-price">
+                                                <span class="sale-price">￥199</span>
+                                                <!-- <span class="ask-price">在线询价</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="rank-pagination swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fixed侧边小楼层 -->
+        <div class="slide-floors">
+            <div class="slide-floor-li li-active">
+                <span class="simplify-name">1F</span>
+                <span class="floor-name">工具耗材</span>
+            </div>
+            <div class="slide-floor-li">
+                <span class="simplify-name">2F</span>
+                <span class="floor-name">工具耗材</span>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="top container-fluid">
+            <div class="top-ul container flex">
+                <div class="top-li text-left">
+                    <img src="../image/icon-footer1.png" alt="" width="28" height="28">
+                    <span>种类齐全 轻松采购</span>
+                </div>
+                <div class="top-li text-center">
+                    <img src="../image/icon-footer2.png" alt="" width="28" height="28">
+                    <span>急速配送 限时送达</span>
+                </div>
+                <div class="top-li text-center">
+                    <img src="../image/icon-footer3.png" alt="" width="28" height="28">
+                    <span>质量保证 精致服务</span>
+                </div>
+                <div class="top-li text-right">
+                    <img src="../image/icon-footer4.png" alt="" width="28" height="28">
+                    <span>阳光采购 质优价廉</span>
+                </div>
+            </div>
+        </div>
+        <div class="middle container flex">
+            <div class="left flex">
+                <div class="left-li">
+                    <h4>购物指南</h4>
+                    <p>注册流程</p>
+                    <p>购物流程</p>
+                    <p>申请发票</p>
+                </div>
+                <div class="left-li">
+                    <h4>付款方式</h4>
+                    <p>线上支付</p>
+                    <p>银行汇款</p>
+                    <p>现金支付</p>
+                </div>
+                <div class="left-li">
+                    <h4>服务政策</h4>
+                    <p>平台法律申明</p>
+                    <p>物流配送</p>
+                    <p>投诉与建议</p>
+                </div>
+                <div class="left-li">
+                    <h4>联系我们</h4>
+                    <p>联系我们</p>
+                    <p>商务合作</p>
+                    <p>加入我们</p>
+                </div>
+                <div class="left-li">
+                    <h4>关于我们</h4>
+                    <p>企业介绍</p>
+                    <p>企业文化</p>
+                </div>
+            </div>
+            <div class="center">
+                <p>
+                    <img src="../image/icon-footer-tel.png" alt="">
+                    400-000-0000
+                </p>
+                <p>
+                    <img src="../image/icon-footer-email.png" alt="">
+                    SCl@sclb2b.com
+                </p>
+                <p>
+                    <img src="../image/icon-footer-time.png" alt="">
+                    营业时间 8:30am-17:30pm
+                </p>
+            </div>
+            <div class="right text-center">
+                <img src="../image/ewm.png" alt="" width="87" height="83">
+                <p>扫一扫，加关注</p>
+            </div>
+        </div>
+        <div class="bottom text-center">
+            Copyright © 2016 - 2026上海崇磊咨询有限公司版权所有
+        </div>
+    </footer>
+
+</body>
+
+</html>
