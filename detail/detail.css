@@ -1,0 +1,117 @@
+.banner-swiper {
+  float: left;
+  margin-left: 210px;
+  width: 700px;
+  height: 420px;
+}
+.banner-swiper .banner-wrapper .swiper-slide {
+  background: #999;
+}
+.banner-swiper .banner-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+.banner-swiper .pagination {
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.banner-swiper .pagination .swiper-pagination-switch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid #ec0b1b;
+  opacity: 1;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.banner-swiper .pagination .swiper-active-switch {
+  background: #ec0b1b;
+}
+.hot-swiper {
+  width: 245px;
+  height: calc(420px - 45px);
+  background: #f6f6f6;
+}
+.hot-swiper .hot-wrapper ul {
+  margin-bottom: 0;
+  padding: 20px 10px;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product {
+  cursor: pointer;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product + .product {
+  margin-top: 15px;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-img {
+  width: 70px;
+  height: 70px;
+  float: left;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info {
+  float: left;
+  width: calc(100% - 70px);
+  padding-left: 10px;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info .title {
+  font-size: 13px;
+  margin-bottom: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info .title:hover {
+  color: red;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info .star-level {
+  margin-bottom: 5px;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info .price {
+  font-size: 12px;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info .price .sale-price {
+  color: #ec0b1b;
+  font-size: 16px;
+  display: inline-block;
+}
+.hot-swiper .hot-wrapper .swiper-slide .product .product-info .price .ask-price {
+  width: 80px;
+  line-height: 25px;
+  border-radius: 25px;
+  border: 1px solid red;
+  color: red;
+  text-align: center;
+  display: inline-block;
+}
+.hot-swiper .pagination {
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.hot-swiper .pagination .swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #ec0b1b;
+  opacity: 1;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.hot-swiper .pagination .swiper-active-switch {
+  width: 20px;
+  background: #ec0b1b;
+}

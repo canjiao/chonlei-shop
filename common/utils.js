@@ -25,7 +25,7 @@ function goTop(){
 const Storage = {
     pre: 'cl_',
     local: {
-        get(name) {
+        get:function(name) {
             if (!name) return
             name = Storage.pre + name;
             return JSON.parse(window.localStorage.getItem(name))
@@ -38,17 +38,17 @@ const Storage = {
             }
             window.localStorage.setItem(name, content)
         },
-        delete(name) {
+        delete:function(name) {
             if (!name) return
             name = Storage.pre + name;
             window.localStorage.removeItem(name)
         },
-        clear() {
+        clear:function() {
             window.localStorage.clear();
         }
     },
     cookie: {
-        get(cname) {
+        get:function(cname) {
             var name = Storage.pre + cname + "=";
             var ca = document.cookie.split(';');
             for (var i = 0; i < ca.length; i++) {
@@ -57,22 +57,22 @@ const Storage = {
             }
             return "";
         },
-        set(cname, cvalue, exdays = 7) {
+        set:function(cname, cvalue, exdays) {
             var name = Storage.pre + cname;
             var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            d.setTime(d.getTime() + (exdays||7 * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toGMTString();
             if (typeof cvalue !== 'string') {
                 cvalue = JSON.stringify(cvalue)
             }
             document.cookie = name + "=" + cvalue + "; " + expires;
         },
-        delete(cname) {
+        delete:function(cname) {
             this.set(cname, '', -1);
             //var name = Storage.pre+cname;
             // document.cookie=name+"='';expires="+(-1);
         },
-        clear() {
+        clear:function() {
             var keys = document.cookie.match(/[^ =;]+(?==)/g)
             //删除所有cookie
             if (keys) {

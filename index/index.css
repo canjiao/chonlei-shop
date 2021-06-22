@@ -7,18 +7,34 @@
   width: 700px;
   height: 420px;
 }
-.main .banner-swiper .banner-wrapper .banner-slide img {
+.main .banner-swiper .banner-wrapper .swiper-slide {
+  background: #999;
+}
+.main .banner-swiper .banner-wrapper .swiper-slide img {
   width: 100%;
   height: 100%;
 }
-.main .banner-swiper .swiper-pagination-bullet {
+.main .banner-swiper .pagination {
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.main .banner-swiper .pagination .swiper-pagination-switch {
+  display: inline-block;
   width: 12px;
   height: 12px;
+  border-radius: 12px;
   background: transparent;
   border: 1px solid #ec0b1b;
   opacity: 1;
+  cursor: pointer;
+  margin: 0 5px;
 }
-.main .banner-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.main .banner-swiper .pagination .swiper-active-switch {
   background: #ec0b1b;
 }
 .main .hot {
@@ -53,7 +69,7 @@
   top: 20px;
 }
 .main .hot .hot-swiper {
-  width: 100%;
+  width: 245px;
   height: calc(420px - 45px);
   background: #f6f6f6;
 }
@@ -61,48 +77,46 @@
   margin-bottom: 0;
   padding: 20px 10px;
   list-style-type: none;
+  box-sizing: border-box;
 }
-.main .hot .hot-swiper .hot-wrapper .swiper-container-vertical > .swiper-scrollbar {
-  opacity: 0.1;
-}
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product {
   cursor: pointer;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product + .product {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product + .product {
   margin-top: 15px;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-img {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-img {
   width: 70px;
   height: 70px;
   float: left;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info {
   float: left;
   width: calc(100% - 70px);
   padding-left: 10px;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info .title {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info .title {
   font-size: 13px;
   margin-bottom: 0px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info .title:hover {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info .title:hover {
   color: red;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info .star-level {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info .star-level {
   margin-bottom: 5px;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info .price {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info .price {
   font-size: 12px;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info .price .sale-price {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info .price .sale-price {
   color: #ec0b1b;
   font-size: 16px;
   display: inline-block;
 }
-.main .hot .hot-swiper .hot-wrapper .hot-slide .product .product-info .price .ask-price {
+.main .hot .hot-swiper .hot-wrapper .swiper-slide .product .product-info .price .ask-price {
   width: 80px;
   line-height: 25px;
   border-radius: 25px;
@@ -111,23 +125,29 @@
   text-align: center;
   display: inline-block;
 }
-.main .hot .hot-pagination {
+.main .hot .hot-swiper .pagination {
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: 4px;
   width: 100%;
-  left: 0;
-  bottom: 5px;
+  text-align: center;
+  margin: 0;
 }
-.main .hot .hot-pagination .swiper-pagination-bullet {
+.main .hot .hot-swiper .pagination .swiper-pagination-switch {
+  display: inline-block;
   width: 8px;
   height: 8px;
+  border-radius: 8px;
   background: transparent;
-  border: 1px solid red;
+  border: 1px solid #ec0b1b;
   opacity: 1;
+  cursor: pointer;
   margin: 0 5px;
 }
-.main .hot .hot-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.main .hot .hot-swiper .pagination .swiper-active-switch {
   width: 20px;
-  border-radius: 8px;
-  background: red;
+  background: #ec0b1b;
 }
 .main .members {
   margin-top: 20px;
@@ -170,26 +190,52 @@
 }
 .main .members .bottom .members-swiper {
   width: 100%;
-  height: 100%;
+  height: 240px;
 }
-.main .members .bottom .members-swiper .swiper-slide {
-  background: #fff;
+.main .members .bottom .members-swiper .swiper-slide .product-item-colum {
+  margin: 0 6px;
 }
 .main .members .bottom .swiper-button-prev {
+  width: 25px;
+  height: 40px;
+  position: absolute;
   left: 1px;
+  top: 115px;
   background: rgba(59, 62, 61, 0.5);
+  cursor: pointer;
 }
 .main .members .bottom .swiper-button-prev::after {
-  font-size: 13px;
-  color: #fff;
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-135deg);
+  left: 8px;
+  top: 12px;
+  position: relative;
 }
 .main .members .bottom .swiper-button-next {
-  background: rgba(59, 62, 61, 0.5);
+  width: 25px;
+  height: 40px;
+  position: absolute;
   right: 1px;
+  top: 115px;
+  background: rgba(59, 62, 61, 0.5);
+  cursor: pointer;
 }
 .main .members .bottom .swiper-button-next::after {
-  font-size: 13px;
-  color: #fff;
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-135deg);
+  left: 2px;
+  top: 12px;
+  position: relative;
 }
 .main .floors .floor1 .left-banner {
   background: linear-gradient(#ff7068, #f99d72) bottom;
@@ -343,6 +389,7 @@
 .main .floors .floor-item .right-info .rank .rank-swiper .rank-slide {
   padding: 0px 15px;
   background: #fff;
+  box-sizing: border-box;
 }
 .main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item {
   padding: 12px 0;
@@ -351,28 +398,37 @@
 .main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item + .product-item {
   border-top: 1px solid #e8e8e8;
 }
+.main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item .p-info {
+  width: 110px;
+}
 .main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item .score {
   position: absolute;
   left: 0px;
   top: 10px;
 }
-.main .floors .floor-item .right-info .rank .rank-pagination {
+.main .floors .floor-item .right-info .rank .rank-swiper .pagination {
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: 4px;
   width: 100%;
-  left: 0;
-  bottom: 12px;
+  text-align: center;
+  margin: 0;
 }
-.main .floors .floor-item .right-info .rank .rank-pagination .swiper-pagination-bullet {
+.main .floors .floor-item .right-info .rank .rank-swiper .pagination .swiper-pagination-switch {
+  display: inline-block;
   width: 8px;
   height: 8px;
+  border-radius: 8px;
   background: transparent;
-  border: 1px solid red;
+  border: 1px solid #ec0b1b;
   opacity: 1;
+  cursor: pointer;
   margin: 0 5px;
 }
-.main .floors .floor-item .right-info .rank .rank-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.main .floors .floor-item .right-info .rank .rank-swiper .pagination .swiper-active-switch {
   width: 20px;
-  border-radius: 8px;
-  background: red;
+  background: #ec0b1b;
 }
 .main .slide-floors {
   display: none;

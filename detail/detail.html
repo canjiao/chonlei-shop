@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../plugin/bootstrap.min.css">
-    <script src="../plugin/jquery-1.11.3.min.js"></script>
-    <script src="../plugin//bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../plugin//swiper-bundle.css">
-    <script src="../plugin/swiper-bundle.min.js"></script>
 
-    <link rel="stylesheet" href="../common/style.css">
-    <link rel="stylesheet" href="./detail.css">
-    <script src="../common/utils.js"></script>
-    <script src="./detail.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../plugin/bootstrap.min.css">
+	<script src="../plugin/jquery-1.11.3.min.js"></script>
+	<script src="../plugin//bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../plugin/idangerous.swiper.css">
+	<script src="../plugin/idangerous.swiper.min.js"></script>
+	<script src="../plugin/template-web.js"></script>
+	<!-- <script src="https://cdn.bootcdn.net/ajax/libs/babel-polyfill/7.12.1/polyfill.js"></script> -->
+
+	<link rel="stylesheet" href="../common/style.css">
+	<link rel="stylesheet" href="./detail.css">
+	<!-- <script src="../common/utils.js"></script> -->
+	<script src="./detail.js"></script>
 </head>
+
 <body>
-    <div class="alert alert-success">成功！很好地完成了提交。</div>
+	<div class="alert alert-success">成功！很好地完成了提交。</div>
+	<div id="html-user">
+		<script id="tpl-user" type="text/html">
+			{{if user}}
+			<h2>{{user.name}}</h2>
+			{{/if}}
+		</script>
+	</div>
+
+	<div class="hot-swiper swiper-container">
+		<div class="hot-wrapper swiper-wrapper" id="swiper-html">
+		<script id="swiper-tpl" type="text/html">
+			{{each data item index}}
+			<ul class="swiper-slide">
+				<li class="product clearfix">
+					<img src="../image/image1.jpg" alt="" class="product-img">
+					<div class="product-info">
+						<p class="title">飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22</p>
+						<p class="star-level">
+							<img src="../image/icon-star-orange.png" alt="" width="10">
+							<img src="../image/icon-star-orange.png" alt="" width="10">
+							<img src="../image/icon-star-orange.png" alt="" width="10">
+							<img src="../image/icon-star-orange.png" alt="" width="10">
+							<img src="../image//icon-star-gray.png" alt="" width="10">
+						</p>
+						<div class="price">
+							<span class="ask-price">在线询价</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			{{/each}}
+		</script>
+		</div>
+		<div class="pagination"></div>
+	</div>
 </body>
+
 </html>

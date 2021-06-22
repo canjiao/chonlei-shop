@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="../plugin/bootstrap.min.css">
     <script src="../plugin/jquery-1.11.3.min.js"></script>
     <script src="../plugin//bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../plugin//swiper-bundle.css">
-    <script src="../plugin/swiper-bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="../plugin//swiper-bundle.css">
+    <script src="../plugin/swiper-bundle.min.js"></script> -->
+    <link rel="stylesheet" href="../plugin/idangerous.swiper.css">
+    <script src="../plugin/idangerous.swiper.min.js"></script>
 
     <link rel="stylesheet" href="../common/style.css">
     <link rel="stylesheet" href="./index.css">
@@ -179,7 +181,7 @@
                 <span class="simplify-name">在线客服</span>
                 <span class="simplify-icon"><img src="../image/icon-fixedMy-kefu.png" alt=""></span>
             </div>
-            <div class="slide-my-li go-top" onclick="goTop()">
+            <div class="slide-my-li go-top" onclick="window.goTop()">
                 <span class="simplify-name">回到顶部</span>
                 <span class="simplify-icon"><img src="../image/icon-fixedMy-top.png" alt=""></span>
             </div>
@@ -192,13 +194,18 @@
         <div class="banner-hot clearfix">
             <!-- banner轮播大图 -->
             <div class="banner-swiper swiper-container">
-                <div class="banner-wrapper swiper-wrapper">
-                    <div class="banner-slide swiper-slide"><img src="../image/banner.jpg" alt=""></div>
-                    <div class="banner-slide swiper-slide"><img src="https://img2.zhidianlife.com/image/2020/11/04/3a0fc9d2-8f04-4491-9382-a41577316d54.jpeg" alt=""></div>
-                    <div class="banner-slide swiper-slide"><img src="../image/banner.jpg" alt=""></div>
+                <div class="banner-wrapper swiper-wrapper" id="swiper-html">
+                    <div class="swiper-slide">
+                        <img src="../image/banner.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://img2.zhidianlife.com/image/2020/11/04/3a0fc9d2-8f04-4491-9382-a41577316d54.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../image/banner.jpg" alt="">
+                    </div>
                 </div>
-                <!-- 如果需要分页器 -->
-                <div class="banner-pagination swiper-pagination"></div>
+                <div class="pagination"></div>
             </div>
             <!-- 活动热销榜 -->
             <div class="hot">
@@ -206,83 +213,9 @@
                 <!-- swiper -->
                 <div class="hot-swiper swiper-container">
                     <div class="hot-wrapper swiper-wrapper">
-                        <div class="hot-slide swiper-slide" style="height: 100%;">
-                            <!-- 内嵌swiper 竖向滚动-->
-                            <div class="swiper-container swiper-container-scrollbar" style="height: 100%;">
-                                <div class="swiper-wrapper">
-                                    <ul class="swiper-slide" style="height:auto;">
-                                        <li class="product clearfix">
-                                            <img src="../image/image1.jpg" alt="" class="product-img">
-                                            <div class="product-info">
-                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
-                                                <p class="star-level">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
-                                                </p>
-                                                <div class="price">
-                                                    <span class="sale-price">￥199</span>
-                                                    <!-- <span class="ask-price">在线询价</span> -->
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="product clearfix">
-                                            <img src="../image/image1.jpg" alt="" class="product-img">
-                                            <div class="product-info">
-                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
-                                                <p class="star-level">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
-                                                </p>
-                                                <div class="price">
-                                                    <span class="ask-price">在线询价</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="product clearfix">
-                                            <img src="../image/image1.jpg" alt="" class="product-img">
-                                            <div class="product-info">
-                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
-                                                <p class="star-level">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
-                                                </p>
-                                                <div class="price">
-                                                    <span class="ask-price">在线询价</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="product clearfix">
-                                            <img src="../image/image1.jpg" alt="" class="product-img">
-                                            <div class="product-info">
-                                                <p class="title">飞科剃须刀飞科剃须刀飞科剃须刀</p>
-                                                <p class="star-level">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image/icon-star-orange.png" alt="" width="10">
-                                                    <img src="../image//icon-star-gray.png" alt="" width="10">
-                                                </p>
-                                                <div class="price">
-                                                    <span class="ask-price">在线询价</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="swiper-scrollbar"></div>
-                            </div>
-
-                        </div>
-                        <!-- <ul class="hot-slide swiper-slide">
+                        <!-- each -->
+                        <ul class="hot-slide swiper-slide">
+                            <!-- each -->
                             <li class="product clearfix">
                                 <img src="../image/image1.jpg" alt="" class="product-img">
                                 <div class="product-info">
@@ -295,15 +228,15 @@
                                         <img src="../image//icon-star-gray.png" alt="" width="10">
                                     </p>
                                     <div class="price">
-                                        <span class="ask-price">在线询价</span>
+                                        <span class="sale-price">￥199</span>
+                                        <!-- <span class="ask-price">在线询价</span> -->
                                     </div>
                                 </div>
                             </li>
-                        </ul> -->
+                        </ul>
                     </div>
+                    <div class="pagination"></div>
                 </div>
-                <!-- 如果需要分页器 -->
-                <div class="hot-pagination swiper-pagination"></div>
             </div>
         </div>
 
@@ -400,8 +333,8 @@
                     </div>
                 </div>
                 <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
 
@@ -416,7 +349,7 @@
                         <span>电动工具</span>
                         <span>扳手/手动套筒</span>
                     </div>
-                    <div class="all">查看全部</span></div>
+                    <div class="all">查看全部</div>
                     <div class="floor-img">
                         <img src="../image/icon-floor-left.png" alt="" width="175" height="130">
                     </div>
@@ -478,6 +411,17 @@
                                             </div>
                                         </div>
                                     </li>
+                                    <li class="product-item product-item-row clearfix">
+                                        <img src="../image/icon-rank-1.png" alt="" width="20" height="25" class="score">
+                                        <img src="../image/image1.jpg" alt="" class="p-img">
+                                        <div class="p-info">
+                                            <p class="p-title">飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22飞科剃22</p>
+                                            <div class="p-price">
+                                                <span class="sale-price">￥199</span>
+                                                <!-- <span class="ask-price">在线询价</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                                 <ul class="rank-slide swiper-slide">
                                     <li class="product-item product-item-row clearfix">
@@ -493,9 +437,9 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- 如果需要分页器 -->
+                            <div class="pagination"></div>
                         </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="rank-pagination swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -508,7 +452,7 @@
                         <span>电动工具</span>
                         <span>扳手/手动套筒</span>
                     </div>
-                    <div class="all">查看全部</span></div>
+                    <div class="all">查看全部</div>
                     <div class="floor-img">
                         <img src="../image/icon-floor-left.png" alt="" width="175" height="130">
                     </div>
@@ -586,9 +530,9 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="pagination"></div>
                         </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="rank-pagination swiper-pagination"></div>
+                        
                     </div>
                 </div>
             </div>

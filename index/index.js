@@ -2,71 +2,47 @@ $(function() {
     //头部商品分类一直展示
     $(".header .bottom .categery .list").show();
     // banner轮播图
-    new Swiper('.banner-swiper', {
-        autoplay: true,//可选选项，自动滑动
-        spaceBetween: 30,
-        effect: 'fade',
-        pagination: {
-          el: '.banner-pagination',
-          clickable :true,
-        },
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true//修改swiper的父元素时，自动初始化swiper
-    });
+    new Swiper('.banner-swiper',{
+        pagination: '.banner-swiper .pagination',
+        paginationClickable: true,
+        autoplay : 3000,//可选选项，自动滑动
+        loop : true,//可选选项，开启循环
+        autoplayDisableOnInteraction : false, //用户操作swiper之后，是否禁止autoplay
+    })
+    
     // 热销商品轮播
     new Swiper('.hot-swiper', {
-
-        autoplay: false,//可选选项，自动滑动
-        effect: 'slide',
-        pagination: {
-          el: '.hot-pagination',
-          clickable :true,
-        },
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true//修改swiper的父元素时，自动初始化swiper
-    });
-    new Swiper('.swiper-container-scrollbar', {
-        direction: 'vertical',
-        roundLengths : true, 
-        slidesPerView: 'auto',
-        freeMode: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        mousewheel: true,
+        pagination: '.hot-swiper .pagination',
+        paginationClickable: true,
     });
 
-    // 新会员专区
-    new Swiper('.members-swiper', {
+    // // 新会员专区
+    var memversSwiper = new Swiper('.members-swiper', {
         slidesPerView: 6,
-        spaceBetween: 15,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true//修改swiper的父元素时，自动初始化swiper
+        loop: true
     });
+    $('.swiper-button-prev').on('click', function(e){
+        e.preventDefault()
+        memversSwiper.swipePrev()
+    })
+    $('.swiper-button-next').on('click', function(e){
+        e.preventDefault()
+        memversSwiper.swipeNext()
+    })
 
 
 
 
-    /**
-     * 楼层相关  
-     */ 
-    // 排行榜
+    // /**
+    //  * 楼层相关  
+    //  */ 
+    // // 排行榜
     $(".floors .floor-item").each(function (index,el) { 
         var elSwiper = '.floor'+(index+1)+' .rank-swiper';
-        var elPagination = '.floor'+(index+1)+' .rank-pagination';
+        var elPagination = '.floor'+(index+1)+' .pagination';
         new Swiper(elSwiper, {
-            autoplay: false,//可选选项，自动滑动
-            effect: 'slide',
-            pagination: {
-              el: elPagination,
-              clickable :true,
-            },
-            observer:true,//修改swiper自己或子元素时，自动初始化swiper
-            observeParents:true//修改swiper的父元素时，自动初始化swiper
+            pagination: elPagination,
+            paginationClickable: true,
         });
     })
 
