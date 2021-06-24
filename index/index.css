@@ -208,6 +208,7 @@
 }
 .main .members .bottom .swiper-button-prev.disabled {
   background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
+  background-size: 22px;
 }
 .main .members .bottom .swiper-button-next {
   width: 30px;
@@ -223,6 +224,7 @@
 }
 .main .members .bottom .swiper-button-next.disabled {
   background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
+  background-size: 22px;
 }
 .main .floors .floor1 .left-banner {
   background: linear-gradient(#ff7068, #f99d72) bottom;
