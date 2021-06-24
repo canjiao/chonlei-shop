@@ -19,15 +19,33 @@ $(function() {
     // // 新会员专区
     var memversSwiper = new Swiper('.members-swiper', {
         slidesPerView: 6,
-        loop: true
+        loop: false
     });
+    var memversProduct = $('.members-swiper .swiper-slide').size();
+    function memversSwiperArrowDisabled(){
+        var firstSwiperFlag = $('.members-swiper .swiper-slide').eq(0).hasClass('swiper-slide-visible');
+        var lastSwiperFlag = $('.members-swiper .swiper-slide').eq(memversProduct-1).hasClass('swiper-slide-visible');
+        if(firstSwiperFlag){
+            $('.main .members .bottom .swiper-button-prev').addClass('disabled')
+        }else{
+            $('.main .members .bottom .swiper-button-prev').removeClass('disabled')
+        }
+        if(lastSwiperFlag){
+            $('.main .members .bottom .swiper-button-next').addClass('disabled')
+        }else{
+            $('.main .members .bottom .swiper-button-next').removeClass('disabled')
+        }
+    }
+    memversSwiperArrowDisabled();
     $('.swiper-button-prev').on('click', function(e){
         e.preventDefault()
         memversSwiper.swipePrev()
+        memversSwiperArrowDisabled()
     })
     $('.swiper-button-next').on('click', function(e){
         e.preventDefault()
         memversSwiper.swipeNext()
+        memversSwiperArrowDisabled()
     })
 
 

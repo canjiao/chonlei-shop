@@ -206,6 +206,9 @@
   background-size: 22px;
   cursor: pointer;
 }
+.main .members .bottom .swiper-button-prev.disabled {
+  background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
+}
 .main .members .bottom .swiper-button-next {
   width: 30px;
   height: 30px;
@@ -217,6 +220,9 @@
   background-size: 22px;
   transform: rotate(180deg);
   cursor: pointer;
+}
+.main .members .bottom .swiper-button-next.disabled {
+  background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
 }
 .main .floors .floor1 .left-banner {
   background: linear-gradient(#ff7068, #f99d72) bottom;
