@@ -1,6 +1,12 @@
 .border {
   border: 1px dashed #999;
 }
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px !important;
+    padding: 0;
+  }
+}
 ul {
   padding: 0;
   list-style-type: none;
@@ -113,7 +119,7 @@ header.header {
 }
 header.header .top {
   height: 30px;
-  background: #f1f1f1;
+  background: #fff;
 }
 header.header .top .top-row {
   margin: 0 auto;
@@ -190,23 +196,24 @@ header.header .top .top-row .right .top-row-item .server {
 }
 header.header .search {
   padding: 20px 0;
+  background: #fff;
 }
 header.header .search .logo {
   float: left;
-  width: 330px;
+  width: 220px;
   height: 50px;
-  background: red;
 }
 header.header .search .search-input {
   float: left;
-  margin-left: 50px;
+  margin-left: 80px;
+  margin-top: 8px;
 }
 header.header .search .search-input .input input {
-  width: 400px;
+  width: 470px;
   padding: 0px 10px;
   height: 40px;
-  border: 1px solid #cbcbcb;
-  border-radius: 5px 0px 0px 5px;
+  border: 2px solid #0166b3;
+  border-radius: 0px;
   float: left;
 }
 header.header .search .search-input .input input:focus {
@@ -216,10 +223,13 @@ header.header .search .search-input .input .s-btn {
   cursor: pointer;
   float: left;
   display: inline-block;
-  width: 60px;
+  width: 110px;
   height: 40px;
-  border-radius: 0px 5px 5px 0px;
-  background: #ec0b1b url(../image/icon-search.png) no-repeat center center;
+  border-radius: 0px;
+  background: #0166b3;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
 }
 header.header .search .search-input .tag {
   padding-top: 5px;
@@ -231,13 +241,14 @@ header.header .search .search-input .tag a {
   color: #999;
 }
 header.header .search .online-price {
+  margin-top: 8px;
   float: left;
   height: 40px;
   line-height: 40px;
-  width: 116px;
-  background: #fd9b00;
+  width: 120px;
+  background: #f36a21;
   color: #fff;
-  margin-left: 60px;
+  margin-left: 22px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -246,13 +257,16 @@ header.header .search .online-price span {
   font-size: 13px;
 }
 header.header .search .my-car {
+  margin-top: 8px;
   float: right;
+  width: 160px;
   height: 40px;
   line-height: 38px;
   border: 1px solid #c6c6c6;
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
+  text-align: center;
 }
 header.header .search .my-car span {
   vertical-align: middle;
@@ -263,7 +277,7 @@ header.header .bottom {
 }
 header.header .bottom .categery {
   float: left;
-  width: 210px;
+  width: 220px;
   position: relative;
 }
 header.header .bottom .categery:hover .list {
@@ -281,7 +295,7 @@ header.header .bottom .categery .list {
   left: 0;
   top: 40px;
   width: 100%;
-  background: #f1f1f1;
+  background: #fff;
 }
 header.header .bottom .categery .list ul {
   margin-bottom: 0;
@@ -317,7 +331,8 @@ header.header .bottom .categery .list ul li h4::after {
   transform: rotateZ(-90deg);
 }
 header.header .bottom .categery .list ul li:hover h4 {
-  background: #f6f6f6;
+  background: #fff;
+  color: #0166b3;
 }
 header.header .bottom .categery .list ul li:hover .li-child {
   display: block;
@@ -331,7 +346,7 @@ header.header .bottom .categery .list ul li .li-child {
   top: 0;
   width: 702px;
   height: 420px;
-  background: #f6f6f6;
+  background: #fff;
   z-index: 99;
 }
 header.header .bottom .categery .list ul li .li-child .row {
@@ -359,7 +374,7 @@ header.header .bottom .categery .list ul li .li-child .col-md-10 a:hover {
 }
 header.header .bottom .right {
   float: left;
-  width: calc(100% - 210px);
+  width: calc(100% - 220px);
   height: 40px;
   align-items: center;
   justify-content: space-between;
