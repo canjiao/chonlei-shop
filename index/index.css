@@ -4,6 +4,9 @@ body {
 .main {
   padding: 0;
 }
+.main a:hover {
+  text-decoration: none;
+}
 .main .banner-hot {
   margin-top: 10px;
 }
@@ -52,6 +55,24 @@ body {
   margin-top: 10px;
   background: #fff;
 }
+.main .banner-hot .banner-hot-left .banner-left-bottom ul {
+  flex: 5;
+  height: 100%;
+}
+.main .banner-hot .banner-hot-left .banner-left-bottom ul li {
+  flex: 1;
+  border-right: 1px solid #eee;
+}
+.main .banner-hot .banner-hot-left .banner-left-bottom ul li img {
+  vertical-align: middle;
+  margin: 20px 6px 20px 20px;
+}
+.main .banner-hot .banner-hot-left .banner-left-bottom ul li p {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #848484;
+}
 .main .banner-hot .banner-hot-right {
   float: right;
   width: 220px;
@@ -94,13 +115,73 @@ body {
 }
 .main .banner-hot .banner-hot-right .banner-right-top .line-bg {
   width: 100%;
-  height: 16px;
+  height: 12px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic {
+  padding: 0 10px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-top {
+  height: 26px;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-top h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-top a {
+  font-size: 12px;
+  color: #999;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-list {
+  font-size: 12px;
+  align-items: center;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-list li {
+  padding: 2px 0;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-list .tag {
+  width: 34px;
+  height: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 18px;
+  background: #fdeeed;
+  color: #ea6b64;
+  margin-right: 10px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .dynamic .dynamic-list p {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #a4a4a4;
+  margin-bottom: 0;
 }
 .main .banner-hot .banner-hot-right .banner-right-bottom {
   width: 100%;
   height: 130px;
   margin-top: 10px;
   background: #fff;
+}
+.main .banner-hot .banner-hot-right .banner-right-bottom ul {
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+}
+.main .banner-hot .banner-hot-right .banner-right-bottom ul li {
+  width: 33.33%;
+  height: 55px;
+  text-align: center;
+  font-size: 13px;
+}
+.main .banner-hot .banner-hot-right .banner-right-bottom ul li img {
+  margin: 6px 0;
+  width: 20px;
+  height: 20px;
+}
+.main .banner-hot .banner-hot-right .banner-right-bottom ul li p {
+  color: #5c5c5c;
 }
 .main .flash-sale {
   margin-top: 28px;
@@ -109,23 +190,276 @@ body {
   float: left;
   width: 233px;
   height: 257px;
+  background: url(../image/flash-sale-left-bg.png);
+  color: #fff;
+  text-align: center;
+}
+.main .flash-sale .flash-sale-left .sale-time {
+  margin-top: 160px;
+}
+.main .flash-sale .flash-sale-left .sale-time b {
+  font-size: 16px;
+}
+.main .flash-sale .flash-sale-left .sale-time i {
+  font-style: normal;
+  font-size: 12px;
+}
+.main .flash-sale .flash-sale-left .count-time span {
+  vertical-align: middle;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #0f2e53;
+  text-align: center;
+  line-height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main .flash-sale .flash-sale-left .count-time b {
+  margin: 0 5px;
 }
 .main .flash-sale .flash-sale-right {
   float: left;
   width: 967px;
   height: 257px;
+  position: relative;
+  background: #fff;
+}
+.main .flash-sale .flash-sale-right .flash-swiper {
+  width: 100%;
+  height: 257px;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum {
+  padding: 10px;
+  cursor: pointer;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-img {
+  width: auto;
+  height: 140px;
+  margin: 0 auto;
+  display: block;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-info .p-title {
+  color: #333;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 10px;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-info .p-title:hover {
+  color: #ec0b1b;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-info .p-price {
+  font-size: 12px;
+  text-align: left;
+  text-indent: 15px;
+  line-height: 25px;
+  padding: 5px 0;
+  width: 160px;
+  margin: 0 auto;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-info .p-price .sale-price {
+  color: #ec0b1b;
+  font-size: 16px;
+  width: 50%;
+  font-weight: bold;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-info .p-price .sale-price i {
+  font-size: 12px;
+  font-style: normal;
+}
+.main .flash-sale .flash-sale-right .flash-swiper .swiper-slide .product-item-colum .p-info .p-price .old-price {
+  width: 50%;
+  color: #999;
+  text-decoration: line-through;
+}
+.main .flash-sale .flash-sale-right .swiper-button-prev {
+  width: 28px;
+  height: 55px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  background: url(../image/icon-flash-sale-right1.png) no-repeat center;
+  cursor: pointer;
+  z-index: 99;
+}
+.main .flash-sale .flash-sale-right .swiper-button-prev.disabled {
+  background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
+}
+.main .flash-sale .flash-sale-right .swiper-button-next {
+  width: 28px;
+  height: 55px;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  background: url(../image/icon-flash-sale-right2.png) no-repeat center;
+  cursor: pointer;
+  z-index: 99;
+}
+.main .flash-sale .flash-sale-right .swiper-button-next.disabled {
+  background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
 }
 .main .recommend {
   margin-top: 15px;
   justify-content: space-between;
 }
+.main .recommend .top {
+  height: 58px;
+  align-items: center;
+}
+.main .recommend .top h3 {
+  margin: 0;
+  width: 220px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.main .recommend .bottom {
+  width: 100%;
+}
 .main .recommend .every-day {
   width: 595px;
   height: 346px;
+  padding: 0 20px;
+  background: #fff;
+}
+.main .recommend .every-day .classfily-title {
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main .recommend .every-day .classfily-title li {
+  color: #424242;
+  font-size: 14px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.main .recommend .every-day .classfily-title li.active {
+  color: #0166b3;
+  border-bottom: 2px solid #0166b3;
+}
+.main .recommend .every-day .product-lowest-price {
+  width: 170px;
+  height: 266px;
+  background: #f7f8f9;
+  position: relative;
+  text-align: center;
+  margin-right: 30px;
+}
+.main .recommend .every-day .product-lowest-price .tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 90px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background: linear-gradient(to right, #f6b73d, #f7a400);
+  font-size: 12px;
+  color: #fff;
+}
+.main .recommend .every-day .product-lowest-price img {
+  margin-top: 56px;
+  margin-bottom: 10px;
+}
+.main .recommend .every-day .product-lowest-price .title {
+  font-size: 14px;
+  color: #424242;
+  padding: 0 15px;
+  height: 40px;
+  overflow: hidden;
+}
+.main .recommend .every-day .product-lowest-price .p-price .sale-price {
+  color: #ec0b1b;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main .recommend .every-day .product-lowest-price .p-price .sale-price i {
+  font-style: normal;
+  font-size: 12px;
+}
+.main .recommend .every-day .product-lowest-price .p-price .old-price {
+  color: #999;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.main .recommend .every-day .classfily-product {
+  flex: 1;
+}
+.main .recommend .every-day .classfily-product .product-list li {
+  width: 50%;
+  float: left;
+  color: #333;
+  font-size: 12px;
+  margin: 24px 0 30px;
+}
+.main .recommend .every-day .classfily-product .product-list li .product-info {
+  margin-left: 10px;
+}
+.main .recommend .every-day .classfily-product .product-list li p {
+  margin-bottom: 0;
+}
+.main .recommend .every-day .classfily-product .product-list li p.title {
+  height: 34px;
+  overflow: hidden;
+  padding-right: 20px;
+}
+.main .recommend .every-day .classfily-product .product-list li p.sale-price {
+  color: #ec0b1b;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+.main .recommend .every-day .classfily-product .product-list li p.sale-price i {
+  font-style: normal;
+}
+.main .recommend .every-day .classfily-product .product-list li p.old-price {
+  color: #999;
+  text-decoration: line-through;
 }
 .main .recommend .brand {
   width: 595px;
   height: 346px;
+  padding: 0 20px;
+  background: #fff;
+}
+.main .recommend .brand .brand-list {
+  flex: 1;
+}
+.main .recommend .brand .brand-list li {
+  float: left;
+  text-align: center;
+  width: 50%;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.main .recommend .brand .brand-list li p {
+  font-size: 13px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+.main .recommend .brand .brand-list li:nth-child(5),
+.main .recommend .brand .brand-list li:nth-child(6) {
+  margin-bottom: 0;
+}
+.main .recommend .brand .brand-list li:nth-child(2n+1)::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  background: #eee;
+  right: -10px;
+  top: 10px;
 }
 .main .members {
   margin-top: 20px;
@@ -236,32 +570,29 @@ body {
   background: linear-gradient(#9b65ff, #c3b6f3) bottom;
 }
 .main .floors .floor-item {
-  margin-top: 20px;
+  margin-bottom: 20px;
   height: 560px;
   background: #f6f6f6;
 }
 .main .floors .floor-item .left-banner {
-  width: 220px;
+  width: 200px;
   height: 100%;
-  padding: 22px;
+  padding: 15px;
   color: #fff;
   position: relative;
 }
 .main .floors .floor-item .left-banner h3 {
   font-size: 22px;
+  padding-right: 20px;
 }
 .main .floors .floor-item .left-banner p {
   min-height: 60px;
 }
 .main .floors .floor-item .left-banner .tags span {
-  display: inline-block;
-  padding: 0px 10px;
+  display: block;
   font-size: 13px;
   height: 25px;
   line-height: 25px;
-  border-radius: 25px;
-  border: 1px solid #fff;
-  margin-right: 10px;
   margin-bottom: 10px;
 }
 .main .floors .floor-item .left-banner .all {
@@ -277,12 +608,14 @@ body {
 }
 .main .floors .floor-item .left-banner .floor-img {
   position: absolute;
-  left: 30px;
-  bottom: 50px;
+  right: 0px;
+  bottom: 0px;
 }
 .main .floors .floor-item .right-info {
   flex: 1;
   height: 100%;
+  background: #fff;
+  padding-left: 20px;
 }
 .main .floors .floor-item .right-info .product-categery {
   flex: 1;
@@ -319,8 +652,8 @@ body {
   display: none;
 }
 .main .floors .floor-item .right-info .product-categery .list {
-  padding: 0 5px;
   flex-wrap: wrap;
+  border-top: 1px solid #eee;
 }
 .main .floors .floor-item .right-info .product-categery .list .product-item {
   width: calc((100% - 40px) / 4);
@@ -329,11 +662,32 @@ body {
 .main .floors .floor-item .right-info .product-categery .list .product-item:nth-child(4) ~ .product-item {
   margin-top: 10px;
 }
+.main .floors .floor-item .right-info .product-categery .list .product-item .p-img {
+  margin: 0 auto 10px;
+}
+.main .floors .floor-item .right-info .product-categery .list .product-item .p-info {
+  padding-bottom: 10px;
+}
+.main .floors .floor-item .right-info .product-categery .list .product-item .p-info .p-title {
+  white-space: nowrap;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: auto;
+}
+.main .floors .floor-item .right-info .product-categery .list .product-item .p-info .p-price .sale-price {
+  font-weight: bold;
+}
+.main .floors .floor-item .right-info .product-categery .list .product-item .p-info .p-price .sale-price i {
+  font-style: normal;
+  font-size: 12px;
+}
 .main .floors .floor-item .right-info .rank {
-  width: 220px;
+  width: 200px;
   height: 100%;
   padding-bottom: 10px;
   position: relative;
+  border-left: 5px solid #f3f3f3;
 }
 .main .floors .floor-item .right-info .rank .top {
   text-align: center;

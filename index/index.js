@@ -9,6 +9,20 @@ $(function() {
         loop : true,//可选选项，开启循环
         autoplayDisableOnInteraction : false, //用户操作swiper之后，是否禁止autoplay
     })
+
+    //限时抢购
+    var flashSwiper = new Swiper('.flash-swiper', {
+        slidesPerView: 5,
+        loop: true,
+    });
+    $('.flash-sale-right .swiper-button-prev').on('click', function(e){
+        e.preventDefault()
+        flashSwiper.swipePrev()
+    })
+    $('.flash-sale-right .swiper-button-next').on('click', function(e){
+        e.preventDefault()
+        flashSwiper.swipeNext()
+    })
     
     // 热销商品轮播
     new Swiper('.hot-swiper', {
@@ -37,12 +51,12 @@ $(function() {
         }
     }
     memversSwiperArrowDisabled();
-    $('.swiper-button-prev').on('click', function(e){
+    $('.members .swiper-button-prev').on('click', function(e){
         e.preventDefault()
         memversSwiper.swipePrev()
         memversSwiperArrowDisabled()
     })
-    $('.swiper-button-next').on('click', function(e){
+    $('.members .swiper-button-next').on('click', function(e){
         e.preventDefault()
         memversSwiper.swipeNext()
         memversSwiperArrowDisabled()
