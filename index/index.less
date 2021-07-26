@@ -5,165 +5,213 @@ body{
 }
 .main{
     padding: 0;
-    .banner-hot-left{
-        float: left;
-        margin-left: 230px;
-        .banner-swiper{
+    .banner-hot{
+        margin-top: 10px;
+        .banner-hot-left{
+            float: left;
             width: 740px;
-            height: 324px;
-            .banner-wrapper{
-                .swiper-slide{
-                    background: #999;
-                    img{
-                        width: 100%;
-                        height: 100%;
+            margin-left: 230px;
+            .banner-swiper{
+                width: 100%;
+                height: 320px;
+                .banner-wrapper{
+                    .swiper-slide{
+                        background: #999;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .pagination {
+                    position: absolute;
+                    z-index: 20;
+                    left: 0px;
+                    bottom: 10px;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    .swiper-pagination-switch {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 12px;
+                        background: transparent;
+                        border: 1px solid #ec0b1b;
+                        opacity: 1;
+                        cursor: pointer;
+                        margin: 0 5px;
+                    }
+                    .swiper-active-switch {
+                        background: #ec0b1b;
                     }
                 }
             }
-            .pagination {
-                position: absolute;
-                z-index: 20;
-                left: 0px;
-                bottom: 10px;
+            .banner-left-bottom{
                 width: 100%;
-                text-align: center;
-                margin: 0;
-                .swiper-pagination-switch {
-                    display: inline-block;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 12px;
-                    background: transparent;
-                    border: 1px solid #ec0b1b;
-                    opacity: 1;
-                    cursor: pointer;
-                    margin: 0 5px;
-                }
-                .swiper-active-switch {
-                    background: #ec0b1b;
-                }
+                height: 80px;
+                margin-top: 10px;
+                background: #fff;
             }
         }
+        .banner-hot-right{
+            float: right;
+            width: 220px;
+            .banner-right-top{
+                width: 100%;
+                height: 270px;
+                background: #fff;
+            }
+            .banner-right-bottom{
+                width: 100%;
+                height: 130px;
+                margin-top: 10px;
+                background: #fff;
+            }
+            // .hot{ 
+            //     width: 220px;
+            //     position: relative;
+            //     .hot-title{
+            //         width: 100%;
+            //         height: 45px;
+            //         line-height: 45px;
+            //         background: #e9e9e9;
+            //         color: #333;
+            //         position: relative;
+            //         &::before{
+            //             content: '';
+            //             width: 15px;
+            //             height: 2px;
+            //             background: #666;
+            //             position: absolute;
+            //             left:45px;
+            //             top:20px;
+            //         }
+            //         &::after{
+            //             content: '';
+            //             width: 15px;
+            //             height: 2px;
+            //             background: #666;
+            //             position: absolute;
+            //             right:45px;
+            //             top:20px;
+            //         }
+            //     }
+            //     .hot-swiper{
+            //         width: 245px;
+            //         height: calc(420px - 45px);
+            //         background: #f6f6f6;
+                
+            //         .hot-wrapper{
+            //             ul{
+            //                 margin-bottom: 0;
+            //                 padding: 20px 10px;
+            //                 list-style-type: none;
+            //                 box-sizing: border-box;
+            //             }
+            //             .swiper-slide{
+            //                 .product{
+            //                     &+.product{
+            //                         margin-top: 15px;
+            //                     }
+            //                     cursor: pointer;
+            //                     .product-img{
+            //                         width: 70px;
+            //                         height: 70px;
+            //                         float: left;
+            //                     }
+            //                     .product-info{
+            //                         float: left;
+            //                         width: calc(100% - 70px);
+            //                         padding-left: 10px;
+            //                         .title{
+            //                             font-size: 13px;
+            //                             margin-bottom: 0px;
+            //                             text-overflow: ellipsis;
+            //                             overflow: hidden;
+            //                             white-space: nowrap;
+            //                             &:hover{
+            //                                 color: red;
+            //                             }
+            //                         }
+            //                         .star-level{
+            //                             margin-bottom: 5px;
+            //                         }
+            //                         .price{
+            //                             font-size: 12px;
+            //                             .sale-price{
+            //                                 color: #ec0b1b;
+            //                                 font-size: 16px;
+            //                                 display: inline-block;
+            //                             }
+            //                             .ask-price{
+            //                                 width: 80px;
+            //                                 line-height: 25px;
+            //                                 border-radius: 25px;
+            //                                 border: 1px solid red;
+            //                                 color: red;
+            //                                 text-align: center;
+            //                                 display: inline-block;
+            //                             }
+            //                         }
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //         .pagination {
+            //             position: absolute;
+            //             z-index: 20;
+            //             left: 0px;
+            //             bottom: 4px;
+            //             width: 100%;
+            //             text-align: center;
+            //             margin: 0;
+            //             .swiper-pagination-switch {
+            //                 display: inline-block;
+            //                 width: 8px;
+            //                 height: 8px;
+            //                 border-radius: 8px;
+            //                 background: transparent;
+            //                 border: 1px solid #ec0b1b;
+            //                 opacity: 1;
+            //                 cursor: pointer;
+            //                 margin: 0 5px;
+            //             }
+            //             .swiper-active-switch {
+            //                 width: 20px;
+            //                 background: #ec0b1b;
+            //             }
+            //         }
+            //     }
+            // }
+        }
     }
-    .banner-hot-right{
-        float: right;
-        width: 220px;
-        // .hot{ 
-        //     width: 220px;
-        //     position: relative;
-        //     .hot-title{
-        //         width: 100%;
-        //         height: 45px;
-        //         line-height: 45px;
-        //         background: #e9e9e9;
-        //         color: #333;
-        //         position: relative;
-        //         &::before{
-        //             content: '';
-        //             width: 15px;
-        //             height: 2px;
-        //             background: #666;
-        //             position: absolute;
-        //             left:45px;
-        //             top:20px;
-        //         }
-        //         &::after{
-        //             content: '';
-        //             width: 15px;
-        //             height: 2px;
-        //             background: #666;
-        //             position: absolute;
-        //             right:45px;
-        //             top:20px;
-        //         }
-        //     }
-        //     .hot-swiper{
-        //         width: 245px;
-        //         height: calc(420px - 45px);
-        //         background: #f6f6f6;
-            
-        //         .hot-wrapper{
-        //             ul{
-        //                 margin-bottom: 0;
-        //                 padding: 20px 10px;
-        //                 list-style-type: none;
-        //                 box-sizing: border-box;
-        //             }
-        //             .swiper-slide{
-        //                 .product{
-        //                     &+.product{
-        //                         margin-top: 15px;
-        //                     }
-        //                     cursor: pointer;
-        //                     .product-img{
-        //                         width: 70px;
-        //                         height: 70px;
-        //                         float: left;
-        //                     }
-        //                     .product-info{
-        //                         float: left;
-        //                         width: calc(100% - 70px);
-        //                         padding-left: 10px;
-        //                         .title{
-        //                             font-size: 13px;
-        //                             margin-bottom: 0px;
-        //                             text-overflow: ellipsis;
-        //                             overflow: hidden;
-        //                             white-space: nowrap;
-        //                             &:hover{
-        //                                 color: red;
-        //                             }
-        //                         }
-        //                         .star-level{
-        //                             margin-bottom: 5px;
-        //                         }
-        //                         .price{
-        //                             font-size: 12px;
-        //                             .sale-price{
-        //                                 color: #ec0b1b;
-        //                                 font-size: 16px;
-        //                                 display: inline-block;
-        //                             }
-        //                             .ask-price{
-        //                                 width: 80px;
-        //                                 line-height: 25px;
-        //                                 border-radius: 25px;
-        //                                 border: 1px solid red;
-        //                                 color: red;
-        //                                 text-align: center;
-        //                                 display: inline-block;
-        //                             }
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //         .pagination {
-        //             position: absolute;
-        //             z-index: 20;
-        //             left: 0px;
-        //             bottom: 4px;
-        //             width: 100%;
-        //             text-align: center;
-        //             margin: 0;
-        //             .swiper-pagination-switch {
-        //                 display: inline-block;
-        //                 width: 8px;
-        //                 height: 8px;
-        //                 border-radius: 8px;
-        //                 background: transparent;
-        //                 border: 1px solid #ec0b1b;
-        //                 opacity: 1;
-        //                 cursor: pointer;
-        //                 margin: 0 5px;
-        //             }
-        //             .swiper-active-switch {
-        //                 width: 20px;
-        //                 background: #ec0b1b;
-        //             }
-        //         }
-        //     }
-        // }
+
+    .flash-sale{
+        margin-top: 28px;
+        .flash-sale-left{
+            float: left;
+            width: 233px;
+            height: 257px;
+        }
+        .flash-sale-right{
+            float: left;
+            width: 967px;
+            height: 257px;
+        }
+    }
+
+    .recommend{
+        margin-top: 15px;
+        justify-content: space-between;
+        .every-day{
+            width: 595px;
+            height: 346px;
+        }
+        .brand{
+            width: 595px;
+            height: 346px;
+        }
     }
     
     .members{

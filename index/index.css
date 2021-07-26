@@ -4,22 +4,26 @@ body {
 .main {
   padding: 0;
 }
-.main .banner-hot-left {
+.main .banner-hot {
+  margin-top: 10px;
+}
+.main .banner-hot .banner-hot-left {
   float: left;
+  width: 740px;
   margin-left: 230px;
 }
-.main .banner-hot-left .banner-swiper {
-  width: 740px;
-  height: 324px;
+.main .banner-hot .banner-hot-left .banner-swiper {
+  width: 100%;
+  height: 320px;
 }
-.main .banner-hot-left .banner-swiper .banner-wrapper .swiper-slide {
+.main .banner-hot .banner-hot-left .banner-swiper .banner-wrapper .swiper-slide {
   background: #999;
 }
-.main .banner-hot-left .banner-swiper .banner-wrapper .swiper-slide img {
+.main .banner-hot .banner-hot-left .banner-swiper .banner-wrapper .swiper-slide img {
   width: 100%;
   height: 100%;
 }
-.main .banner-hot-left .banner-swiper .pagination {
+.main .banner-hot .banner-hot-left .banner-swiper .pagination {
   position: absolute;
   z-index: 20;
   left: 0px;
@@ -28,7 +32,7 @@ body {
   text-align: center;
   margin: 0;
 }
-.main .banner-hot-left .banner-swiper .pagination .swiper-pagination-switch {
+.main .banner-hot .banner-hot-left .banner-swiper .pagination .swiper-pagination-switch {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -39,12 +43,54 @@ body {
   cursor: pointer;
   margin: 0 5px;
 }
-.main .banner-hot-left .banner-swiper .pagination .swiper-active-switch {
+.main .banner-hot .banner-hot-left .banner-swiper .pagination .swiper-active-switch {
   background: #ec0b1b;
 }
-.main .banner-hot-right {
+.main .banner-hot .banner-hot-left .banner-left-bottom {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  background: #fff;
+}
+.main .banner-hot .banner-hot-right {
   float: right;
   width: 220px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top {
+  width: 100%;
+  height: 270px;
+  background: #fff;
+}
+.main .banner-hot .banner-hot-right .banner-right-bottom {
+  width: 100%;
+  height: 130px;
+  margin-top: 10px;
+  background: #fff;
+}
+.main .flash-sale {
+  margin-top: 28px;
+}
+.main .flash-sale .flash-sale-left {
+  float: left;
+  width: 233px;
+  height: 257px;
+}
+.main .flash-sale .flash-sale-right {
+  float: left;
+  width: 967px;
+  height: 257px;
+}
+.main .recommend {
+  margin-top: 15px;
+  justify-content: space-between;
+}
+.main .recommend .every-day {
+  width: 595px;
+  height: 346px;
+}
+.main .recommend .brand {
+  width: 595px;
+  height: 346px;
 }
 .main .members {
   margin-top: 20px;

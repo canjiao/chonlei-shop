@@ -274,6 +274,7 @@ header.header .search .my-car span {
 }
 header.header .bottom {
   padding: 0;
+  background: #fff;
 }
 header.header .bottom .categery {
   float: left;
@@ -285,7 +286,7 @@ header.header .bottom .categery:hover .list {
 }
 header.header .bottom .categery .title {
   color: #fff;
-  background: red;
+  background: #0166b3;
   padding: 10px 15px;
   height: 40px;
 }
