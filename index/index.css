@@ -61,6 +61,41 @@ body {
   height: 270px;
   background: #fff;
 }
+.main .banner-hot .banner-hot-right .banner-right-top .user-info {
+  width: 100%;
+  height: 68px;
+  align-items: center;
+  justify-content: center;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .user-info p {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 12px;
+  margin-left: 14px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .user-btn {
+  justify-content: center;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .user-btn .btns {
+  width: 88px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 12px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .user-btn .login {
+  background: #0166b3;
+  margin-right: 10px;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .user-btn .register {
+  background: #f36a21;
+}
+.main .banner-hot .banner-hot-right .banner-right-top .line-bg {
+  width: 100%;
+  height: 16px;
+}
 .main .banner-hot .banner-hot-right .banner-right-bottom {
   width: 100%;
   height: 130px;
@@ -168,6 +203,16 @@ body {
 .main .members .bottom .swiper-button-next.disabled {
   background: #bdbdbd url(../image/icon-left-arrow.png) no-repeat center;
   background-size: 22px;
+}
+.main .floors-title {
+  height: 80px;
+}
+.main .floors-title h3 {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 80px;
+  padding-left: 40px;
+  background: url(../image/icon-floors-title1.png) no-repeat 0px center;
 }
 .main .floors .floor1 .left-banner {
   background: linear-gradient(#ff7068, #f99d72) bottom;
