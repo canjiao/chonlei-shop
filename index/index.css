@@ -595,17 +595,6 @@ body {
   line-height: 25px;
   margin-bottom: 10px;
 }
-.main .floors .floor-item .left-banner .all {
-  width: 88px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  background: #fff;
-  border-radius: 30px;
-  color: #ec0b1b;
-  font-size: 13px;
-  margin-top: 10px;
-}
 .main .floors .floor-item .left-banner .floor-img {
   position: absolute;
   right: 0px;
@@ -685,81 +674,49 @@ body {
 .main .floors .floor-item .right-info .rank {
   width: 200px;
   height: 100%;
-  padding-bottom: 10px;
-  position: relative;
   border-left: 5px solid #f3f3f3;
 }
-.main .floors .floor-item .right-info .rank .top {
-  text-align: center;
+.main .floors .floor-item .right-info .rank .rank-title {
+  position: relative;
   height: 55px;
-  align-items: center;
-  justify-content: center;
-}
-.main .floors .floor-item .right-info .rank .top p {
-  margin-bottom: 0;
-  display: inline-block;
-  line-height: 35px;
-  padding: 0px 20px;
-  border-radius: 35px;
-  min-width: 150px;
-  color: #ec0b1b;
-  border: 1px solid #ec0b1b;
-}
-.main .floors .floor-item .right-info .rank .top p span {
-  position: relative;
-}
-.main .floors .floor-item .right-info .rank .top p span img {
-  position: absolute;
-  right: -14px;
-  top: -5px;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper {
-  height: calc(100% - 55px);
-  margin-right: 10px;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper .rank-slide {
-  padding: 0px 15px;
-  background: #fff;
-  box-sizing: border-box;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item {
-  padding: 12px 0;
-  position: relative;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item + .product-item {
-  border-top: 1px solid #e8e8e8;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item .p-info {
-  width: 110px;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper .rank-slide .product-item .score {
-  position: absolute;
-  left: 0px;
-  top: 10px;
-}
-.main .floors .floor-item .right-info .rank .rank-swiper .pagination {
-  position: absolute;
-  z-index: 20;
-  left: 0px;
-  bottom: 4px;
-  width: 100%;
-  text-align: center;
+  line-height: 55px;
+  font-size: 16px;
+  padding-left: 12px;
   margin: 0;
 }
-.main .floors .floor-item .right-info .rank .rank-swiper .pagination .swiper-pagination-switch {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  background: transparent;
-  border: 1px solid #ec0b1b;
-  opacity: 1;
-  cursor: pointer;
-  margin: 0 5px;
+.main .floors .floor-item .right-info .rank .rank-title::after {
+  content: '';
+  width: 3px;
+  height: 18px;
+  background: #0166b3;
+  position: absolute;
+  left: 0;
+  top: 18px;
 }
-.main .floors .floor-item .right-info .rank .rank-swiper .pagination .swiper-active-switch {
-  width: 20px;
-  background: #ec0b1b;
+.main .floors .floor-item .right-info .rank .top {
+  padding: 0 10px;
+  border-bottom: 5px solid #f3f3f3;
+  height: 245px;
+}
+.main .floors .floor-item .right-info .rank .top .product-item {
+  position: relative;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.main .floors .floor-item .right-info .rank .top .product-item .p-info {
+  padding-left: 0;
+}
+.main .floors .floor-item .right-info .rank .top .product-item .p-info .p-price .sale-price {
+  transform: translateY(5px);
+}
+.main .floors .floor-item .right-info .rank .top .product-item:first-child {
+  padding-top: 0;
+}
+.main .floors .floor-item .right-info .rank .top .product-item:last-child {
+  border-bottom: none;
+}
+.main .floors .floor-item .right-info .rank .bottom {
+  padding: 0 10px;
 }
 .main .slide-floors {
   display: none;
