@@ -23,6 +23,14 @@ $(function() {
         e.preventDefault()
         flashSwiper.swipeNext()
     })
+
+    //每日推荐
+    $('.recommend .every-day .classfily-title li').click(function (e) { 
+        e.preventDefault();
+        var index = $(this).index();
+        $(this).addClass("active").siblings().removeClass("active");
+        $('.recommend .every-day .bottom').hide().eq(index).show();
+    });
     
     // 热销商品轮播
     // new Swiper('.hot-swiper', {

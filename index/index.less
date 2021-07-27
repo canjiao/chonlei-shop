@@ -453,6 +453,12 @@ body{
             height: 346px;
             padding: 0 20px;
             background: #fff;
+            .bottom{
+                display: none;
+            }
+            .top + .bottom{
+                display: block;
+            }
             .classfily-title{
                 flex: 1;
                 align-items: center;
@@ -467,6 +473,7 @@ body{
                         border-bottom: 2px solid #0166b3;
                     }
                 }
+                
             }
             .product-lowest-price{
                 width: 170px;
@@ -852,6 +859,7 @@ body{
                         font-size: 16px;
                         padding-left: 12px;
                         margin: 0;
+                        border-bottom: 1px solid #eee;
                         &::after{
                             content: '';
                             width: 3px;
@@ -869,18 +877,16 @@ body{
                         height: 245px;
                         .product-item{
                             position: relative;
-                            padding: 15px 0;
+                            padding: 10px 0;
                             border-bottom: 1px solid #eee;
                             .p-info{
                                 padding-left: 0;
+                                color: #333;
                                 .p-price{
                                     .sale-price{
                                         transform: translateY(5px);
                                     }
                                 }
-                            }
-                            &:first-child{
-                                padding-top: 0;
                             }
                             &:last-child{
                                 border-bottom: none;
@@ -889,6 +895,16 @@ body{
                     }
                     .bottom{
                         padding:0 10px;
+                        .brand-logo{
+                            padding: 10px 20px;
+                            img{
+                                display: block;
+                                border-bottom: 1px solid #eee;
+                                &:last-child{
+                                    border-bottom: none;
+                                }
+                            }
+                        }
                     }
                     // .rank-swiper{
                     //     height: calc(100% - 55px);
@@ -949,7 +965,7 @@ body{
         background: #fff;
         left: 50%;
         top:36%;
-        transform: translateX(-640px) translateY(-50%);
+        transform: translateX(-680px) translateY(-50%);
         // bottom: 325px;
         // transform: translateX(-640px);
         .slide-floor-li{
@@ -965,7 +981,7 @@ body{
                 border-top: 1px solid #d5d5d5;
             }
             &.li-active{
-                background: #ec0b1b;
+                background: #0166b3;
                 color: #fff;
                 .simplify-name{
                     display: block;

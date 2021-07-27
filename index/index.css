@@ -327,6 +327,12 @@ body {
   padding: 0 20px;
   background: #fff;
 }
+.main .recommend .every-day .bottom {
+  display: none;
+}
+.main .recommend .every-day .top + .bottom {
+  display: block;
+}
 .main .recommend .every-day .classfily-title {
   flex: 1;
   align-items: center;
@@ -683,6 +689,7 @@ body {
   font-size: 16px;
   padding-left: 12px;
   margin: 0;
+  border-bottom: 1px solid #eee;
 }
 .main .floors .floor-item .right-info .rank .rank-title::after {
   content: '';
@@ -700,17 +707,15 @@ body {
 }
 .main .floors .floor-item .right-info .rank .top .product-item {
   position: relative;
-  padding: 15px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
 .main .floors .floor-item .right-info .rank .top .product-item .p-info {
   padding-left: 0;
+  color: #333;
 }
 .main .floors .floor-item .right-info .rank .top .product-item .p-info .p-price .sale-price {
   transform: translateY(5px);
-}
-.main .floors .floor-item .right-info .rank .top .product-item:first-child {
-  padding-top: 0;
 }
 .main .floors .floor-item .right-info .rank .top .product-item:last-child {
   border-bottom: none;
@@ -718,13 +723,23 @@ body {
 .main .floors .floor-item .right-info .rank .bottom {
   padding: 0 10px;
 }
+.main .floors .floor-item .right-info .rank .bottom .brand-logo {
+  padding: 10px 20px;
+}
+.main .floors .floor-item .right-info .rank .bottom .brand-logo img {
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.main .floors .floor-item .right-info .rank .bottom .brand-logo img:last-child {
+  border-bottom: none;
+}
 .main .slide-floors {
   display: none;
   position: fixed;
   background: #fff;
   left: 50%;
   top: 36%;
-  transform: translateX(-640px) translateY(-50%);
+  transform: translateX(-680px) translateY(-50%);
 }
 .main .slide-floors .slide-floor-li {
   width: 50px;
@@ -740,7 +755,7 @@ body {
   border-top: 1px solid #d5d5d5;
 }
 .main .slide-floors .slide-floor-li.li-active {
-  background: #ec0b1b;
+  background: #0166b3;
   color: #fff;
 }
 .main .slide-floors .slide-floor-li.li-active .simplify-name {
