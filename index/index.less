@@ -871,10 +871,36 @@ body{
                         }
 
                     }
+                    .rank-list{
+                        display: none;
+                    }
+                    .rank-title + .rank-list{
+                        display: block;
+                    }
+                    .list-dot{
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        text-align: center;
+                        span{
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 100%;
+                            background: #999;
+                            cursor: pointer;
+                            &.active{
+                                background:#0166b3;
+                            }
+                        }
+                    }
                     .top{
                         padding:0 10px;
                         border-bottom: 5px solid #f3f3f3;
                         height: 245px;
+                        position: relative;
+                        
                         .product-item{
                             position: relative;
                             padding: 10px 0;
@@ -882,6 +908,10 @@ body{
                             .p-info{
                                 padding-left: 0;
                                 color: #333;
+                                width: 115px;
+                                .p-title{
+                                    font-size: 13px;
+                                }
                                 .p-price{
                                     .sale-price{
                                         transform: translateY(5px);
@@ -895,7 +925,8 @@ body{
                     }
                     .bottom{
                         padding:0 10px;
-                        .brand-logo{
+                        position: relative;
+                        .rank-list{
                             padding: 10px 20px;
                             img{
                                 display: block;
@@ -906,55 +937,6 @@ body{
                             }
                         }
                     }
-                    // .rank-swiper{
-                    //     height: calc(100% - 55px);
-                    //     margin-right: 10px;
-                    //     .rank-slide{
-                    //         padding: 0px 15px;
-                    //         background: #fff;
-                    //         box-sizing: border-box;
-                    //         .product-item{
-                    //             padding:12px 0;
-                    //             position: relative;
-                    //             &+.product-item{
-                    //                 border-top: 1px solid #e8e8e8;
-                    //             }
-                    //             .p-info{
-                    //                 width: 110px;
-                    //             }
-                    //             .score{
-                    //                 position: absolute;
-                    //                 left:0px;
-                    //                 top:10px;
-                    //             }
-                    //         }
-                    //     }
-                    //     .pagination {
-                    //         position: absolute;
-                    //         z-index: 20;
-                    //         left: 0px;
-                    //         bottom: 4px;
-                    //         width: 100%;
-                    //         text-align: center;
-                    //         margin: 0;
-                    //         .swiper-pagination-switch {
-                    //             display: inline-block;
-                    //             width: 8px;
-                    //             height: 8px;
-                    //             border-radius: 8px;
-                    //             background: transparent;
-                    //             border: 1px solid #ec0b1b;
-                    //             opacity: 1;
-                    //             cursor: pointer;
-                    //             margin: 0 5px;
-                    //         }
-                    //         .swiper-active-switch {
-                    //             width: 20px;
-                    //             background: #ec0b1b;
-                    //         }
-                    //     }
-                    // }
-                    
                 }
             }
         }

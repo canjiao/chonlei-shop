@@ -31,6 +31,14 @@ $(function() {
         $(this).addClass("active").siblings().removeClass("active");
         $('.recommend .every-day .bottom').hide().eq(index).show();
     });
+
+    //排行榜dot点击切换
+    $('.list-dot span').hover(function (e) { 
+        e.preventDefault();
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).parent().siblings('.rank-list').hide().eq(index).show();
+    });
     
     // 热销商品轮播
     // new Swiper('.hot-swiper', {
